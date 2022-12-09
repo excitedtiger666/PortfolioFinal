@@ -1,0 +1,26 @@
+[
+  {
+    "header": "Artist",
+    "link": "#Artist",
+    "caption": "Filmmaker | Dancer",
+    "image": "Images/dancer.jpg"
+  },
+  {
+    "header": "Academic",
+    "link": "#Academic",
+    "caption": "Life Long Learner",
+    "image": "Images/academic.jpg"
+  },
+  {
+    "header": "Sports-Fanatic",
+    "link": "#Sports Fanatic",
+    "caption": "Basketball | Football",
+    "image": "Images/sports.jpg"
+  },
+  {
+    "header": "Aspiring Physician",
+    "link": "#Aspiring Physician",
+    "caption": "Passion for healing",
+    "image": "Images/medical.jpg"
+  }
+]

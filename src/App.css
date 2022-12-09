@@ -1,38 +1,228 @@
-.App {
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--white);
+  --accent: var(--black);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+  padding-bottom: 100px;
+}
+
+* {
+  /* font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; */
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.2;
   text-align: center;
+  margin: 100px 0 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 0 0 30px 0;
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1px,
+    var(--background) 1px
+  );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  font-size: 14px;
+  line-height: 14px;
+}
+
+footer::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.2;
+}
+
+footer svg {
+  margin-right: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+p,
+code {
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+img {
+  max-width: 100%;
+}
+
+article {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--ash-black);
+  transform-origin: 0%;
+}
+
+.header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.image-container {
+  display: flex;
+}
+
+.card-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 20%;
+  height: 15%;
+  margin: 2rem;
+  /* border: 2px solid black; */
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.card-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-section img {
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.academic-title {
+  padding-top: 1rem;
+}
+.divider {
+  border-bottom: 1px solid #e6e6e9;
+  width: 70%;
+  margin: 2.5% 0% 2.5% 17%;
+}
+.academic-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-description {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 1rem;
+}
+.article-image-container {
+  width: 45%;
+  height: 40%;
+  margin: 2rem;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  padding: 0.5rem;
+}
+.article {
+  width: 55%;
+}
+iframe {
+  border-radius: 5px;
+}
+.button-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
+  margin-right: 1rem;
+}
+button {
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: var(--ash-black);
+  border: 3px solid var(--ash-black);
   color: white;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: white;
+  color: var(--ash-black);
 }
